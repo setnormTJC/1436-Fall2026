@@ -4,10 +4,12 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="August27/August27.vcxproj" Id="2b1b688d-9e35-4da7-8caa-034a67aee2bc" />
+  <Project Path="SelectionQuiz/SelectionQuiz.vcxproj" Id="dee9357f-9ae4-40ba-a622-6f074372d9c4" />
   <Project Path="Sept1/Sept1.vcxproj" Id="7b43182c-2f0f-4dee-8799-03c9d32e471e" />
   <Project Path="Sept10/Sept10.vcxproj" Id="c184b00a-73ea-47ca-a9a1-170a692c0b52" />
   <Project Path="Sept15-studentContributions/Sept15-studentContributions.vcxproj" Id="e393c622-2714-4829-b751-37c852587d00" />
   <Project Path="Sept15/Sept15.vcxproj" Id="7076ef6f-e55c-442b-be31-4264c98368df" />
   <Project Path="Sept17/Sept17.vcxproj" Id="d2e984d7-08e0-431d-a020-56bea2e92cb6" />
+  <Project Path="Sept22/Sept22.vcxproj" Id="b566c894-edec-411a-8332-6ace7d0848d0" />
   <Project Path="September3/September3.vcxproj" Id="fac1ae23-c802-4e4c-ab24-78a8727f9716" />
 </Solution>

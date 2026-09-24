@@ -20,7 +20,6 @@ int main()
 		//sets reminder to exercise every 3 days for a month
 	}
 
-
 	//let's read in a lexicon (dictionary file)
 
 	//cout << "Enter the filename you want to display the contents of:\n";

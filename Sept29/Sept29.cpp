@@ -5,6 +5,8 @@
 
 #include<Windows.h> //gives access to the Sleep function (this is an OS header file)
 
+#include"Functions.h"
+
 using namespace std; 
 
 void demoAFewThings()
@@ -21,8 +23,6 @@ void demoAFewThings()
 	cout << numberSquared << "\n";
 	int counter = 1;
 
-
-
 	while (counter <= 10)
 
 	{
@@ -38,30 +38,43 @@ void demoAFewThings()
 
 int main()
 {
-	int countdownValue = 10; 
+	srand(time(0)); //makes a "random seed"
 
-	while (countdownValue > 0)
+	//snake eyes means both dice roll a 1: 
+
+	int d4Result = -1; //why -1? Because it's a quick and dirty way of guaranteeing the loop executes
+	int d20Result = -1; 
+
+	int numberOfDiceRolls = 0; 
+
+	const int NUMBER_OF_EXPERIMENTS = 100; 
+
+	double totalNumberOfRolls = 0; //we need this for averaging 
+
+	for (int i = 0; i < NUMBER_OF_EXPERIMENTS; ++i)
 	{
-		//this is the "body" of the loop:
-		//countdownValue = countdownValue - 1; //decrement 
-		countdownValue--; 
+		while (d4Result != 1 || d20Result != 1) //this is called a "nested loop"
+		{
+			d4Result = rollDice(4);
+			d20Result = rollDice(20); 
 
-		Sleep(500); 
-		
-		cout << countdownValue << "...";
-		
+			//cout << "D4 rolled: " << d4Result << " and D20 rolled: " << d20Result << "\n";
+
+			numberOfDiceRolls++; 
+		}
+
+		cout << "It took this many rolls to roll snake eyes: " << numberOfDiceRolls << "\n";
+		totalNumberOfRolls = totalNumberOfRolls + numberOfDiceRolls; 
+		numberOfDiceRolls = 0;
+
+		//system("pause"); 
+		//system("cls"); 
+
+		//reset a couple of variables: 
+		d4Result = -1; 
+		d20Result = -1; 
 	}
 
-	system("finalCountdown.wav");
+	cout << "The AVERAGE number of rolls is: " << totalNumberOfRolls / NUMBER_OF_EXPERIMENTS << "\n";
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

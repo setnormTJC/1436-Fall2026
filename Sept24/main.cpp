@@ -10,6 +10,8 @@ using namespace std;
 
 int main()
 {
+
+
 	//first, generate a random number
 	constexpr int N = 1000; //const means "constant"  (N as in "number")
 	//N = 123; //leads to a syntax error because we used constant expression "modifier"

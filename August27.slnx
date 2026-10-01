@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="August27/August27.vcxproj" Id="2b1b688d-9e35-4da7-8caa-034a67aee2bc" />
+  <Project Path="Oct1/Oct1.vcxproj" Id="e16aa7dd-4d2a-4209-91c6-297624d035ed" />
   <Project Path="SelectionQuiz/SelectionQuiz.vcxproj" Id="dee9357f-9ae4-40ba-a622-6f074372d9c4" />
   <Project Path="Sept1/Sept1.vcxproj" Id="7b43182c-2f0f-4dee-8799-03c9d32e471e" />
   <Project Path="Sept10/Sept10.vcxproj" Id="c184b00a-73ea-47ca-a9a1-170a692c0b52" />

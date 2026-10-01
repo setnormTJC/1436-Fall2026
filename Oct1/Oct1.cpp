@@ -3,9 +3,33 @@
 
 #include <iostream>
 
+#include<vector> 
+
+using namespace std; 
+
 int main()
 {
-    std::cout << "Hello World!\n";
+//	string firstItemOnGroceryList = "eggs" ;
+	//string secondItemOnGroceryList = "bacon";
+	//string thirdItemOnGroceryList = "tuna";
+
+	vector<string> groceryList =
+	{
+		"eggs",
+		"tuna",
+		"bacon", 
+		"tomato"
+	};
+	
+	cout << "The size of the grocery list is: " << groceryList.size() << endl;
+
+	//how to print this grocery list? 
+	for (int index = 0; index < groceryList.size(); ++index) //preincrement versus postincrement 
+		//be WARY of "off by one errors" (ex: <= groceryList.size())
+	{
+		cout << groceryList[index] << endl; //[] -> the "subscript" operator 
+	}
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

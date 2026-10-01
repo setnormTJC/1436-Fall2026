@@ -3,4 +3,4 @@
 
 int rollDice(int numberOfSidesOnDice); //function declaration
 
-void playTheFinalCountdown();
+void playTheFinalCountdown(); //another function declaration 

@@ -6,7 +6,7 @@
 
 using namespace std; 
 
-int rollDice(int numberOfSidesOnDice)
+int rollDice(int numberOfSidesOnDice) //ex: roll a 6-sided dice (or a 20-sided dice, etc.)
 {
 
 	int whatTheDiceRolled = (rand() % numberOfSidesOnDice) + 1; 

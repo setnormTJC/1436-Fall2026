@@ -1,36 +1,51 @@
 // Oct1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
+#include"StudentRelatedFunctions.h" //why double quotes and not angle brackets (let's talk about it 1 on 1) 
 
+#include <iostream>
 #include<vector> 
 
 using namespace std; 
 
+void printListOfNumbers(vector<int> numbers)
+{
+	cout << "Size of numbers is: " << numbers.size() << "\n";
+
+	//counterpart 
+	//numbers.at()
+	//cout << "The FIRST? element (thing in the list) is: " << numbers[0] << "\n";
+	
+	//this is how you print the entire list of numbers (which is the input to this function)
+	for (int index = 0; index < numbers.size(); index++)
+	{
+		cout << numbers[index] << endl; //put characters OUT to the terminal
+	}
+}
+
 int main()
 {
-//	string firstItemOnGroceryList = "eggs" ;
-	//string secondItemOnGroceryList = "bacon";
-	//string thirdItemOnGroceryList = "tuna";
-
-	vector<string> groceryList =
+	//numbers is a "local variable"
+	vector<int> numbers =
 	{
-		"eggs",
-		"tuna",
-		"bacon", 
-		"tomato"
+		11, 22, 33, 44, 55, 66, 9494
 	};
+
+	printListOfNumbers(numbers);
+
 	
-	cout << "The size of the grocery list is: " << groceryList.size() << endl;
 
-	//how to print this grocery list? 
-	for (int index = 0; index < groceryList.size(); ++index) //preincrement versus postincrement 
-		//be WARY of "off by one errors" (ex: <= groceryList.size())
-	{
-		cout << groceryList[index] << endl; //[] -> the "subscript" operator 
-	}
 
-}
+	vector<string> allStudentNames = getAllStudentNames("studentRoster.csv");
+
+	//for (int i = 0; i < allStudentNames.size(); ++i) //i = index
+	//{
+	//	cout << allStudentNames[i] << endl; 
+	//}
+
+	//cout << "Longest name in list is: " << getLongestName(allStudentNames) << endl;
+
+} //end main 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu

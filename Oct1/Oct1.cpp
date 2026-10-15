@@ -28,11 +28,20 @@ int main()
 	//numbers is a "local variable"
 	vector<int> numbers =
 	{
-		11, 22, 33, 44, 55, 66, 9494
+		121, 22, 33, 44, 55, 66, 9494
 	};
 
-	printListOfNumbers(numbers);
 
+	//5 * 6 //binary operator
+	//cout << "The BEGIN function returns (if you use ._ptr (pointer)): " << numbers.begin() << "\n";
+
+	//cout << "Dereferencing the begin function yields: " << *numbers.begin() << endl;
+	
+	//numbers.pop_back();
+
+	//numbers.erase(numbers.end() - 2);
+
+	printListOfNumbers(numbers);
 	
 
 

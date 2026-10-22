@@ -48,8 +48,6 @@ int main()
 	//	std::cout << (char)i << " "; //"typecasting" (think Arnold Schwarzenegger)
 	//}
 
-
-
 	//std::cout << "a" << std::endl; 
 	//std::cout << "b" << std::endl;
 	//std::cout << "c" << std::endl;

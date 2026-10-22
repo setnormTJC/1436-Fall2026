@@ -48,10 +48,11 @@ int calculateAge(int birthDay, int birthMonth, int birthYear, int currentDay, in
 {
 	int age = 0; 
 	
+	std::cout << "Years: " << currentYear - birthYear << " months: " << currentMonth - birthMonth
+		<< " days: " << currentDay - birthDay << std::endl; 
 
 	//insert Logic (calculations)
  
-
 	if (currentMonth > birthMonth)
 	{
 		if (currentDay > birthDay)

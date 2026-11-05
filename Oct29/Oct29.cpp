@@ -3,6 +3,7 @@
 
 #include<iomanip> //for set width (setw())
 #include <iostream>
+#include<queue>
 #include <vector>
 
 void printSalesData(std::vector<std::vector<int>> salesData)
@@ -69,6 +70,9 @@ int findMaxSalesInCertainRow(std::vector<std::vector<int>> salesData, int rowNum
 
 int main()
 {
+
+	std::priority_queue<int> queue; 
+
 	//xox
 	//oxo
 	//xoo

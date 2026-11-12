@@ -22,7 +22,15 @@ namespace TicTacToe
 	//this is a "helper" that is called by playGame (because playGame would be VERY complicated otherwise)
 	void updateGrid(twoDGrid& ticTacToeGrid, std::string theMove, std::string playerID);
 
+	void printTheGrid(twoDGrid& ticTacToeGrid);
 
-	void printTheGrid(twoDGrid& ticTacGrid);
+	bool checkForWin(const twoDGrid& ticTacToeGrid); //passing by reference saves SPACE (RAM -> ex: 16 GB max)
+
+	//now the start of the "helper function" section: 
+
+	bool checkForHorizontalWin(const twoDGrid& ticTacToeGrid);
+	bool checkForVerticalWin(const twoDGrid& ticTacToeGrid);
+	bool checkForDiagonalWin(const twoDGrid& ticTacToeGrid);
+
 }
 

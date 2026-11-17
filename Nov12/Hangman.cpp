@@ -54,6 +54,26 @@ std::string pickRandomWord(std::vector<std::string> words)
 	return randomWord; 
 }
 
+void findAndReplace(std::string wordToGuess, std::string& placeholder, char characterToSearchFor)
+{
+	for (int location = 0; location < wordToGuess.size(); ++location)
+	{
+		if (wordToGuess[location] == characterToSearchFor)
+		{
+			std::cout << "Correctamundo!" << std::endl; 
+			placeholder[location] = characterToSearchFor; 
+		}
+
+		else
+		{
+			std::cout << "The character " << characterToSearchFor << " was not found" << std::endl; 
+		}
+	}
+
+	std::cout << "The updated placeholder is: " << placeholder << std::endl; 
+
+}
+
 std::string generatePlaceholder(std::string wordToGuess)
 {
 	std::string placeholder; 
@@ -66,6 +86,8 @@ std::string generatePlaceholder(std::string wordToGuess)
 	return placeholder; 
 }
 
+
+
 void playHangman()
 {
 	//first, get all dictionary words (OR - add a second player who you prompt for the word to guess)
@@ -76,16 +98,31 @@ void playHangman()
 	std::string placeholder = generatePlaceholder(wordToGuess); 
 
 
-	std::cout << "If you are a CHEATER, here is the word: " << wordToGuess << std::endl; 
+	//std::cout << "If you are a CHEATER, here is the word: " << wordToGuess << std::endl; 
 	std::cout << "The word to guess is: " << placeholder << std::endl; 
 
+	int maxGuessesAllowed = placeholder.size(); 
+
+	int currentNumberOfGuesses = 0; 
 
 	//start the game loop (which runs until the user has guessed all characters of the wordToGuess)
-	while (placeholder != wordToGuess)
+	while (placeholder != wordToGuess && currentNumberOfGuesses < maxGuessesAllowed)
 	{
 		//prompt for guessedCharacter and inform the user if the letter is in the word or not
+		char guessedCharacter; 
+		std::cout << "Guess a letter: " << std::endl; 
+		//std::getline //this might not be well-suited to hangman
+		std::cin >> guessedCharacter; // this operator, >>, is the "input operator" (stream EXTRACTION operator)
+		currentNumberOfGuesses++; 
 
+		//check if the character is in the string: 
+		findAndReplace(wordToGuess, placeholder, guessedCharacter);
 		
+	}
+
+	if (currentNumberOfGuesses == maxGuessesAllowed)
+	{
+		std::cout << "You loser" << std::endl; 
 	}
 }
 
